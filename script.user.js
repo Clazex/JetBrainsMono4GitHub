@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          JetBrainsMono4GitHub
 // @namespace     https://userscript.clazex.net/
-// @version       2.1.0
+// @version       2.1.1
 // @description   Change GitHub code view font to JetBrains Mono
 // @license       MIT
 // @author        Clazex
@@ -42,7 +42,7 @@
   function applyFont(font = getFont()) {
     style?.remove();
     style = GM_addStyle(
-      `pre, code.markdown-body, .blob-code-inner, .CodeMirror-lines, .react-code-text, .diff-text, ul[aria-label="Code Navigation"] .PRIVATE_TreeView-item-content-text span { font-family: ${font}, monospace !important }`
+      `pre, .markdown-body code, .blob-code-inner, .CodeMirror-lines, .react-code-text, .diff-text, ul[aria-label="Code Navigation"] .PRIVATE_TreeView-item-content-text span { font-family: ${font}, monospace !important }`
       + '.blob-code-inner, .CodeMirror-lines, .react-code-text, .diff-text { font-size: 1em !important; }'
     );
 
