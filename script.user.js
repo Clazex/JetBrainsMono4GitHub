@@ -42,7 +42,7 @@
   function applyFont(font = getFont()) {
     style?.remove();
     style = GM_addStyle(
-      `.blob-code-inner, .CodeMirror-lines, .highlight pre, .react-code-text { font-family: ${font}, monospace !important }`
+      `pre, code.markdown-body, .blob-code-inner, .CodeMirror-lines, .react-code-text { font-family: ${font}, monospace !important }`
       + '.blob-code-inner, .CodeMirror-lines, .react-code-text { font-size: 1em !important; }'
     );
 
