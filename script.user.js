@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          JetBrainsMono4GitHub
 // @namespace     https://clazex.dev/
-// @version       2.1.1
+// @version       2.1.2
 // @description   Change GitHub code view font to JetBrains Mono
 // @license       MIT
 // @author        Clazex
@@ -20,13 +20,13 @@
 // @match         https://github.com/*
 // ==/UserScript==
 
-(function() {
-  'use strict';
+(function () {
+  "use strict";
 
   const DEFAULT_FONT = `'Jetbrains Mono'`;
 
   function getFont() {
-    return GM_getValue('font', DEFAULT_FONT);
+    return GM_getValue("font", DEFAULT_FONT);
   }
 
   function setFont(font) {
@@ -34,7 +34,7 @@
       return;
     }
 
-    GM_setValue('font', font);
+    GM_setValue("font", font);
     applyFont(font);
   }
 
@@ -51,10 +51,10 @@
 
   function updateFont() {
     const oldFont = getFont();
-    let newFont = '';
+    let newFont = "";
 
     while (true) {
-      newFont = prompt('Specify font family', oldFont);
+      newFont = prompt("Specify font family", oldFont);
 
       if (newFont == null) {
         return;
