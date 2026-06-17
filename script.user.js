@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name          JetBrainsMono4GitHub
-// @namespace     https://userscript.clazex.net/
+// @namespace     https://clazex.dev/
 // @version       2.1.1
 // @description   Change GitHub code view font to JetBrains Mono
 // @license       MIT
 // @author        Clazex
-// @copyright     2022, Clazex
+// @copyright     2022-2026 Clazex
 // @icon          https://github.githubassets.com/favicons/favicon.png
 // @downloadURL   https://raw.githubusercontent.com/Clazex/JetBrainsMono4GitHub/main/script.user.js
 // @updateURL     https://raw.githubusercontent.com/Clazex/JetBrainsMono4GitHub/main/script.user.js
