@@ -41,10 +41,9 @@
   let style;
   function applyFont(font = getFont()) {
     style?.remove();
-    style = GM_addStyle(
-      `pre, .markdown-body code, .blob-code-inner, .CodeMirror-lines, .react-code-text, .diff-text, ul[aria-label="Code Navigation"] .PRIVATE_TreeView-item-content-text span { font-family: ${font}, monospace !important }`
-      + '.blob-code-inner, .CodeMirror-lines, .react-code-text, .diff-text { font-size: 1em !important; }'
-    );
+    style = GM_addStyle(`:root { --fontStack-monospace: ${font} !important }
+.react-blob-textarea, .react-code-lines, .blob-code-inner, .CodeMirror-lines, .react-code-text,
+.diff-text { font-size: 1em !important; }`);
 
     unregisterMenuCommand();
     registerMenuCommand(font);
